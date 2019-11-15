@@ -1,14 +1,7 @@
-soma([], 0).
-soma([H|T], X) :- soma(T, Y), (X is Y+H).
-
-subtrai([], 0).
-subtrai([H|T], X) :- subtrai(T, Y), (X is Y-H).
-
-multiplica([], 1).
-multiplica([H|T], X) :- multiplica(T, Y), (X is Y*H).
-
-divide([], 1).
-divide([H|T], X) :- divide(T, Y), (X is Y/H).
-
+%Feito
 operacao(X, Y, Z) :- 
-	soma([X,Y], A), A is Z. 
+	Z is X+Y, write('Z eh a soma de X e Y');
+	Z is X-Y, write('Z eh a diferenca de X e Y');
+	Z is X*Y, write('Z eh o produto de X e Y');
+	Z is X/Y, write('Z eh a divisao de X e Y');
+	write('Erro!').
